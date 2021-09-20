@@ -1,0 +1,6 @@
+FROM node:14-alpine
+WORKDIR /test
+COPY package*.json ./
+RUN npm install
+COPY . .
+CMD [ "npm", "test" ]
